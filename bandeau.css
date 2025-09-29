@@ -1,0 +1,123 @@
+/* BANDEAU INFORMATIF */
+.info-banner {
+    background: var(--light);
+    border: var(--border);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    grid-gap: 10px;
+}
+
+.banner-section {
+    background: var(--grey);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--link);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: var(--border);
+}
+
+/* LIENS UTILES */
+.links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.links-list li {
+    margin: 0;
+}
+
+.links-list a {
+    color: var(--link);
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.links-list a:hover {
+    background: var(--lighter);
+}
+
+/* WIDGET SUJETS RÉCENTS */
+#recent-topics-widget {
+    background: transparent;
+}
+
+#recent-topics-widget .module {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#recent-topics-widget .module-title {
+    display: none;
+}
+
+/* TOP SITES */
+.top-sites {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vote-text {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.vote-button {
+    display: block;
+    padding: 8px 12px;
+    background: var(--grey);
+    color: var(--link);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    border: var(--border);
+}
+
+.vote-button:hover {
+    background: var(--lighter);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .links-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .links-list {
+        grid-template-columns: 1fr;
+    }
+}
