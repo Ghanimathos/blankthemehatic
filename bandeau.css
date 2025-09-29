@@ -1,28 +1,34 @@
-/* BANDEAU INFORMATIF */
+/* ============================= */
+/*        BANDEAU INFORMATIF     */
+/* ============================= */
+
 .info-banner {
     background: var(--light);
     border: var(--border);
     border-radius: 5px;
     padding: 10px;
+    margin: 10px 0;
 }
 
 .banner-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-    grid-gap: 10px;
-    place-items: center; /* centre horizontalement et verticalement */
+    gap: 10px;
+    /* on laisse le centrage au niveau des sections individuelles */
 }
 
 .banner-section {
     background: var(--grey);
     border-radius: 5px;
     padding: 10px;
-    display: flex;              /* active Flexbox */
-    flex-direction: column;     /* pour que les éléments restent empilés */
+
+    display: flex;              /* flex pour centrer le contenu */
+    flex-direction: column;     /* contenu en colonne */
     justify-content: center;    /* centre verticalement */
     align-items: center;        /* centre horizontalement */
-    text-align: center;         /* pour le texte multi-lignes */
-    height: 100%;               /* optionnel, s’assure que le conteneur prend toute la hauteur */
+    text-align: center;         /* texte multi-lignes */
+    height: auto;               /* la hauteur s’adapte au contenu */
+    min-height: 80px;           /* optionnel : hauteur uniforme minimale */
 }
 
 .section-title {
@@ -34,15 +40,18 @@
     border-bottom: var(--border);
 }
 
-/* LIENS UTILES */
+/* ============================= */
+/*           LIENS UTILES         */
+/* ============================= */
+
 .links-list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    justify-content: center; /* centre verticalement */
+    gap: 5px;
+    width: 100%;
 }
 
 .links-list li {
@@ -53,10 +62,10 @@
     color: var(--link);
     text-decoration: none;
     display: block;
-    padding: 4px 8px;
+    padding: 6px 10px;
     border-radius: 5px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -64,7 +73,10 @@
     background: var(--lighter);
 }
 
-/* WIDGET SUJETS RÉCENTS */
+/* ============================= */
+/*      WIDGET SUJETS RÉCENTS     */
+/* ============================= */
+
 #recent-topics-widget {
     background: transparent;
 }
@@ -81,12 +93,14 @@
     display: none;
 }
 
-/* TOP SITES */
+/* ============================= */
+/*             TOP SITES          */
+/* ============================= */
+
 .top-sites {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    justify-content: center; /* centre verticalement */
 }
 
 .vote-text {
@@ -113,7 +127,10 @@
     background: var(--lighter);
 }
 
-/* RESPONSIVE */
+/* ============================= */
+/*           RESPONSIVE           */
+/* ============================= */
+
 @media (max-width: 768px) {
     .banner-grid {
         grid-template-columns: 1fr;
@@ -130,7 +147,22 @@
     }
 }
 
-/* léger styling pour le widget injecté */
-#recent-topics-widget .marquee { overflow:hidden; height:200px; }
-#recent-topics-widget a { display:block; padding:4px 6px; text-decoration:none; color:var(--link); }
-#recent-topics-widget a:hover { background:var(--lighter); }
+/* ============================= */
+/*    WIDGET INJECTÉ LÉGER        */
+/* ============================= */
+
+#recent-topics-widget .marquee {
+    overflow: hidden;
+    height: 200px;
+}
+
+#recent-topics-widget a {
+    display: block;
+    padding: 4px 6px;
+    text-decoration: none;
+    color: var(--link);
+}
+
+#recent-topics-widget a:hover {
+    background: var(--lighter);
+}
