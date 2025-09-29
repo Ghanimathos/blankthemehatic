@@ -17,6 +17,7 @@
     background: var(--grey);
     border-radius: 5px;
     padding: 10px;
+    align-items: center;     /* centre verticalement */
 }
 
 .section-title {
