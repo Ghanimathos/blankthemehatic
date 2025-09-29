@@ -121,3 +121,8 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* léger styling pour le widget injecté */
+#recent-topics-widget .marquee { overflow:hidden; height:200px; }
+#recent-topics-widget a { display:block; padding:4px 6px; text-decoration:none; color:var(--link); }
+#recent-topics-widget a:hover { background:var(--lighter); }
