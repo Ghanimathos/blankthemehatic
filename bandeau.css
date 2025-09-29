@@ -17,6 +17,12 @@
     background: var(--grey);
     border-radius: 5px;
     padding: 10px;
+    display: flex;              /* active Flexbox */
+    flex-direction: column;     /* pour que les éléments restent empilés */
+    justify-content: center;    /* centre verticalement */
+    align-items: center;        /* centre horizontalement */
+    text-align: center;         /* pour le texte multi-lignes */
+    height: 100%;               /* optionnel, s’assure que le conteneur prend toute la hauteur */
 }
 
 .section-title {
