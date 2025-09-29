@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     grid-gap: 10px;
+    place-items: center; /* centre horizontalement et verticalement */
 }
 
 .banner-section {
