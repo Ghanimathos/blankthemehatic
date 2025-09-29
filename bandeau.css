@@ -4,7 +4,6 @@
     border: var(--border);
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0;
 }
 
 .banner-grid {
@@ -18,11 +17,6 @@
     background: var(--grey);
     border-radius: 5px;
     padding: 10px;
-    display: flex;          /* transforme en conteneur flex */
-    flex-direction: column; /* pour que le texte reste en colonne */
-    justify-content: center; /* centre verticalement */
-    align-items: center;     /* centre horizontalement */
-    text-align: center;      /* assure le centrage du texte multi-lignes */
 }
 
 .section-title {
